@@ -29,7 +29,7 @@ public class ConfigJunit {
         System.out.println("Test class = " + testInfo.getTestClass().getClass().getSimpleName());
         System.out.println("Test method = " + testInfo.getTestMethod());
         System.out.println("Test name = " + testInfo.getDisplayName());
-        //call
+
     }
 
 

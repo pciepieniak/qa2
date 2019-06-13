@@ -1,20 +1,12 @@
-package com.jsystems.qa2.frontend.test;
+package com.jsystems.qa2.frontend.classicfrontend.test;
 
 import com.jsystems.qa2.frontend.Configuration;
-import com.jsystems.qa2.frontend.page.LoginPage;
-import com.jsystems.qa2.frontend.page.MainWordpressPage;
-import com.jsystems.qa2.frontend.page.UserPage;
+import com.jsystems.qa2.frontend.classicfrontend.page.LoginPage;
+import com.jsystems.qa2.frontend.classicfrontend.page.MainWordpressPage;
+import com.jsystems.qa2.frontend.classicfrontend.page.UserPage;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;

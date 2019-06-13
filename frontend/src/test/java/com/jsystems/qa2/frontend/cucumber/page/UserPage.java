@@ -1,4 +1,4 @@
-package com.jsystems.qa2.frontend.page;
+package com.jsystems.qa2.frontend.cucumber.page;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,6 +12,7 @@ public class UserPage extends BasePage{
         PageFactory.initElements(webDriver, this);
     }
 
-    @FindBy(css = "img.gravatar")
+    //@FindBy(css = "img.gravatar")
+    @FindBy(css = ".masterbar__item.masterbar__item-me")
     public WebElement userAvatar;
 }

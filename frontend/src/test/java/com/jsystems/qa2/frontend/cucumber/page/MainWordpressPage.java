@@ -1,6 +1,5 @@
-package com.jsystems.qa2.frontend.page;
+package com.jsystems.qa2.frontend.cucumber.page;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

@@ -1,4 +1,4 @@
-package com.jsystems.qa2.frontend.test;
+package com.jsystems.qa2.frontend.classicfrontend.test;
 
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -72,7 +72,7 @@ public class WindowTest extends ConfigFrontend {
 
         webDriver.switchTo().frame(testframe);
 
-        String expectedFrameText =webDriver.findElement(By.id("testpagelink")).getText();
+        String expectedFrameText = webDriver.findElement(By.id("testpagelink")).getText();
         String actualFrameText = "My frame text";
 
         if(actualFrameText.equals(expectedFrameText)){

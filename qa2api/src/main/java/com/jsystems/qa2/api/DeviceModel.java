@@ -1,5 +1,10 @@
 package com.jsystems.qa2.api;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class DeviceModel {
-    public int dupa = 0;
+    public String produce;
+
+    @JsonProperty(value = "screen.size", required = true)
+    public int screenSize;
 }

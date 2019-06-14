@@ -8,6 +8,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import java.net.URISyntaxException;
+import java.nio.file.Paths;
 import java.util.concurrent.TimeUnit;
 
 import static java.lang.Thread.sleep;
@@ -15,17 +17,32 @@ import static java.lang.Thread.sleep;
 public class ConfigFrontend {
     protected WebDriver webDriver;
 
+    String chromePath;
+    String fireFoxPath;
+
+    {
+        try {
+            chromePath = Paths.get(getClass().getClassLoader().getResource("driver/chromedriver.exe").toURI()).toFile().getAbsolutePath();
+            fireFoxPath = Paths.get(getClass().getClassLoader().getResource("driver/geckodriver.exe").toURI()).toFile().getAbsolutePath();
+        } catch (URISyntaxException e) {
+            e.printStackTrace();
+        }
+    }
+
     @BeforeAll
     public static void beforeAll()
     {
         //WebDriverManager.chromedriver().setup();
-        System.setProperty("webdriver.chrome.driver", ClassLoader.getSystemClassLoader().getResource("driver/chromedriver.exe").getFile());
-        System.setProperty("webdriver.gecko.driver", ClassLoader.getSystemClassLoader().getResource("driver/geckodriver.exe").getFile());
+        //System.setProperty("webdriver.chrome.driver", ClassLoader.getSystemClassLoader().getResource("driver/chromedriver.exe").getFile());
+        //System.setProperty("webdriver.gecko.driver", ClassLoader.getSystemClassLoader().getResource("driver/geckodriver.exe").getFile());
     }
 
     @BeforeEach
     public void beforeEach()
     {
+        System.setProperty("webdriver.chrome.driver", chromePath);
+        System.setProperty("webdriver.gecko.driver", fireFoxPath);
+
         String browser = Configuration.getBROWSER();
 
         if (browser.equals("chrome"))

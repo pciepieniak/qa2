@@ -1,4 +1,6 @@
-package com.jsystems.qa2.api;
+package com.jsystems.qa2.api.model.user;
+
+import com.jsystems.qa2.api.model.device.Device;
 
 import java.util.List;
 

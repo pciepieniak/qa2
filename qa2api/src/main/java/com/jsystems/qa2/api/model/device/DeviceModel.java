@@ -1,4 +1,4 @@
-package com.jsystems.qa2.api;
+package com.jsystems.qa2.api.model.device;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
